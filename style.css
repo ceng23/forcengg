@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fae1dd;
+    border-radius: 5px;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+}
+
+.hearts {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.alo {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: "Reenie Beanie", cursive;
+}
+
+.desc {
+    text-align: center;
+    width: 350px;
+    font-size: 25px;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    font-family: "Reenie Beanie", cursive;
+    background-color: #fff;
+}
+
+.btn {
+    font-size: 30px;
+    text-align: center;
+    padding: 8px 8px;
+    width: 20rem;
+    background-color: crimson;
+    border: 2px solid skyblue;
+    border-radius: 15px;
+    color: #fff;
+   
+}
+
+.btn-2 {
+    font-size: 15px;
+    text-align: center;
+    padding: 8px 8px;
+    width: 10rem;
+    background-color: crimson;
+    border: 2px solid skyblue;
+    border-radius: 15px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+}
+
+.btn:hover {
+    transition: 0.3s;
+    background-color: #fff;
+    border: 2px solid #191919;
+    color: #191919;
+}
+
+.btn-2:hover {
+    transition: 0.3s;
+    background-color: #fff;
+    border: 2px solid #191919;
+    color: #191919;
+}
+
+.container-btn {
+    display: flex;
+    gap: 15px;
+}
+
+.heart {
+    height: 30px; /* Ubah tinggi sesuai keinginan */
+    width: 30px; /* Ubah lebar sesuai keinginan */
+    background: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart 0.6s linear infinite;
+}
+
+@keyframes heart {
+    0% {
+        transform: rotate(-45deg) scale(1.07); /* Sesuaikan skala di sini */
+    }
+    80% {
+        transform: rotate(-45deg) scale(1.0); /* Sesuaikan skala di sini */
+    }
+    100% {
+        transform: rotate(-45deg) scale(0.8); /* Sesuaikan skala di sini */
+    }
+}
+
+.heart::before {
+    content: '';
+    position: absolute;
+    height: 30px; /* Ubah tinggi sesuai keinginan */
+    width: 30px; /* Ubah lebar sesuai keinginan */
+    background: #f20044;
+    top: -15px; /* Ubah posisi agar tetap proporsional */
+    border-radius: 50%; /* Membuat bulatan */
+    box-shadow: -10px 10px 90px #f20044;
+}
+
+.heart::after {
+    content: '';
+    position: absolute;
+    height: 30px; /* Ubah tinggi sesuai keinginan */
+    width: 30px; /* Ubah lebar sesuai keinginan */
+    background: #f20044;
+    right: -15px; /* Ubah posisi agar tetap proporsional */
+    border-radius: 50%; /* Membuat bulatan */
+    box-shadow: -10px 10px 90px #f20044;
+}
+.selamat {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 20px; /* Menambahkan margin horizontal untuk memberi jarak antara teks dan hati */
+    overflow: hidden; /* Menyembunyikan teks yang tidak ditampilkan */
+    white-space: nowrap; /* Mencegah teks membungkus */
+    border-right: .15em solid #f20044; /* Garis vertikal di sebelah kanan teks */
+    animation: typing 4s steps(8) ; /* Mengatur animasi */
+}
+
+@keyframes typing {
+    from {
+        width: 0; /* Memulai dari lebar 0 */
+    }
+    to {
+        width: 100%; /* Mengatur lebar akhir menjadi 100% */
+    }
+}
+
+
+
+span {
+    color: #f20044;
+}
+.selamat-lanjutan{
+font-size: 20px;
+font-family: "Reenie Beanie", cursive ;
+}
+
+.audio-container {
+    width: 300px; /* Atur lebar sesuai kebutuhan */
+    margin: 10px auto;
+    background-color: #f0f0f0; /* Warna latar belakang */
+    border-radius: 8px; /* Sudut membulat */
+    padding: 10px; /* Ruang dalam */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+    display: flex;
+    align-items: center;
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+button {
+    background-color: #6200ea; /* Warna tombol */
+    color: white; /* Warna teks tombol */
+    border: none;
+    border-radius: 4px; /* Sudut membulat tombol */
+    padding: 8px 12px; /* Ruang dalam tombol */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transisi warna */
+}
+
+button:hover {
+    background-color: #3700b3; /* Warna tombol saat hover */
+}
+
+.seek-bar {
+    flex-grow: 1; /* Membuat slider mengisi ruang yang tersisa */
+    margin: 0 10px; /* Ruang kiri dan kanan */
+    height: 4px; /* Tinggi slider */
+    border-radius: 2px; /* Sudut membulat slider */
+    background: #ccc; /* Warna latar belakang slider */
+    -webkit-appearance: none; /* Menghilangkan tampilan default */
+}
+
+.seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Menghilangkan tampilan default */
+    appearance: none; /* Menghilangkan tampilan default */
+    width: 16px; /* Lebar thumb */
+    height: 16px; /* Tinggi thumb */
+    background: #6200ea; /* Warna thumb */
+    border-radius: 50%; /* Membuat thumb bulat */
+    cursor: pointer; /* Kursor pointer */
+}
+
+.seek-bar::-moz-range-thumb {
+    width: 16px; /* Lebar thumb */
+    height: 16px; /* Tinggi thumb */
+    background: #6200ea; /* Warna thumb */
+    border-radius: 50%; /* Membuat thumb bulat */
+    cursor: pointer; /* Kursor pointer */
+}
+
+.paper{
+    background-color: #f0f0f0;
+    padding: 10px 15px;
+    width: 350px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.footer {
+    background-color: #f1f1f1; /* Warna latar belakang footer */
+    text-align: center; /* Mengatur teks agar berada di tengah */
+    padding: 10px; /* Memberikan jarak di dalam footer */
+    position: fixed; /* Membuat footer tetap di bagian bawah */
+    bottom: 0; /* Menempatkan footer di bagian bawah halaman */
+    width: 100%; /* Memastikan footer mengambil lebar penuh */
+    font-size: 14px; /* Ukuran font */
+    color: #333; /* Warna teks */
+}
